@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "title": "Beach Cleanup",
+    "description": "Help clean up the local beach and protect marine life.",
+    "location": "Oceanview Park",
+    "date": "2024-07-01",
+    "type": "environment"
+  },
+  {
+    "id": "2",
+    "title": "Food Bank Assistance",
+    "description": "Organize and distribute food to families in need.",
+    "location": "Downtown Shelter",
+    "date": "2024-07-05",
+    "type": "community"
+  },
+  {
+    "id": "3",
+    "title": "Tutoring High School Students",
+    "description": "Support students with math and science homework.",
+    "location": "City Library",
+    "date": "2024-07-10",
+    "type": "education"
+  }
+]
