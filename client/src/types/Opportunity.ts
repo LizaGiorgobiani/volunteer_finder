@@ -3,6 +3,6 @@ export interface Opportunity {
   title: string;
   description: string;
   location: string;
-  date: string; // ISO format
+  date: string;
   type: string;
 }
