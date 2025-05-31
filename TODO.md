@@ -33,7 +33,7 @@
 
   - [x] Create Vite-based React + TypeScript project in `client/`
   - [x] Setup ESLint, Prettier, and directory structure
-  - [] Add base routes and page layout (e.g., Header, Footer)
+  - [x] Add base routes and page layout (e.g., Header, Footer)
   - [x] _Commit: "chore: Setup React app with TypeScript and base structure"_
 
 - [ ] **Step 2.2: Define Opportunity Types & API Service**
