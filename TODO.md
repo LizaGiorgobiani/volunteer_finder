@@ -4,7 +4,7 @@
 
   - [x] Create monorepo folders: `client/` and `server/`
   - [x] Initialize Git repo and set up `.gitignore`
-  - [] Create initial `README.md` with project overview
+  - [ ] Create initial `README.md` with project overview
   - [x] Setup Node.js and TypeScript in `server/`
   - [x] Configure `tsconfig.json` and ESLint/Prettier
   - [x] _Commit: "chore: Initialize project structure with TypeScript setup"_
