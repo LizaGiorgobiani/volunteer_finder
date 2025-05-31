@@ -1,14 +1,14 @@
-import express from 'express';
-import cors from 'cors';
-
+import express from "express";
+import cors from "cors";
+import opportunities from "./data/opportunities.json";
 const app = express();
 const PORT = 3001;
 
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (_, res) => {
-  res.send('Volunteer API is running!');
+app.get("/api/opportunities", (_, res) => {
+  res.json(opportunities);
 });
 
 app.listen(PORT, () => {
