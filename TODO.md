@@ -1,40 +1,40 @@
 ## Phase 1: Project Setup & Core Backend
 
-- [ ] **Step 1.1: Initialize Project Structure**
+- [x] **Step 1.1: Initialize Project Structure**
 
-  - [ ] Create monorepo folders: `client/` and `server/`
-  - [ ] Initialize Git repo and set up `.gitignore`
-  - [ ] Create initial `README.md` with project overview
-  - [ ] Setup Node.js and TypeScript in `server/`
-  - [ ] Configure `tsconfig.json` and ESLint/Prettier
-  - [ ] _Commit: "chore: Initialize project structure with TypeScript setup"_
+  - [x] Create monorepo folders: `client/` and `server/`
+  - [x] Initialize Git repo and set up `.gitignore`
+  - [] Create initial `README.md` with project overview
+  - [x] Setup Node.js and TypeScript in `server/`
+  - [x] Configure `tsconfig.json` and ESLint/Prettier
+  - [x] _Commit: "chore: Initialize project structure with TypeScript setup"_
 
-- [ ] **Step 1.2: Define Backend Data Models & Sample Data**
+- [x] **Step 1.2: Define Backend Data Models & Sample Data**
 
-  - [ ] Create `Opportunity` interface with fields: `id`, `title`, `description`, `date`, `location`, `type`
-  - [ ] Add `opportunities.json` with 5–10 sample opportunities
-  - [ ] _Commit: "feat: Define Opportunity model and add sample data"_
+  - [x] Create `Opportunity` interface with fields: `id`, `title`, `description`, `date`, `location`, `type`
+  - [x] Add `opportunities.json` with 5–10 sample opportunities
+  - [x] _Commit: "feat: Define Opportunity model and add sample data"_
 
-- [ ] **Step 1.3: Implement Basic Express API**
+- [x] **Step 1.3: Implement Basic Express API**
 
-  - [ ] Setup Express server with CORS and JSON parsing
-  - [ ] Implement `/api/opportunities` route to return sample data
-  - [ ] Support filtering via `keyword`, `type` query params
-  - [ ] _Commit: "feat: Implement API route for listing and filtering opportunities"_
+  - [x] Setup Express server with CORS and JSON parsing
+  - [x] Implement `/api/opportunities` route to return sample data
+  - [x] Support filtering via `keyword`, `type` query params
+  - [x] _Commit: "feat: Implement API route for listing and filtering opportunities"_
 
-- [ ] **Step 1.4: Backend Testing**
-  - [ ] Configure Jest or Supertest for API testing
-  - [ ] Write tests for endpoint and filtering logic
-  - [ ] _Commit: "test: Add basic API tests for listing and filtering"_
+- [x] **Step 1.4: Backend Testing**
+  - [x] Configure Jest or Supertest for API testing
+  - [x] Write tests for endpoint and filtering logic
+  - [x] _Commit: "test: Add basic API tests for listing and filtering"_
 
 ## Phase 2: Frontend Setup & UI Components
 
-- [ ] **Step 2.1: React App Setup**
+- [x] **Step 2.1: React App Setup**
 
-  - [ ] Create Vite-based React + TypeScript project in `client/`
-  - [ ] Setup ESLint, Prettier, and directory structure
-  - [ ] Add base routes and page layout (e.g., Header, Footer)
-  - [ ] _Commit: "chore: Setup React app with TypeScript and base structure"_
+  - [x] Create Vite-based React + TypeScript project in `client/`
+  - [x] Setup ESLint, Prettier, and directory structure
+  - [] Add base routes and page layout (e.g., Header, Footer)
+  - [x] _Commit: "chore: Setup React app with TypeScript and base structure"_
 
 - [ ] **Step 2.2: Define Opportunity Types & API Service**
 
