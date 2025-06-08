@@ -13,7 +13,7 @@ const SearchBar: React.FC<Props> = ({ keyword, setKeyword }) => {
       placeholder="Search opportunities..."
       value={keyword}
       onChange={(e) => setKeyword(e.target.value)}
-      className="w-full p-2 border rounded"
+      className="search-bar"
     />
   );
 };

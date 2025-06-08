@@ -8,7 +8,7 @@ type Props = {
 
 const OpportunityCard: React.FC<Props> = ({ opportunity }) => {
   return (
-    <div className="border rounded p-4 shadow-sm">
+    <div className="opportunity-card border rounded p-4 shadow-sm">
       <h2 className="text-xl font-semibold">{opportunity.title}</h2>
       <p className="text-gray-600">{opportunity.description}</p>
       <div className="mt-2 text-sm text-gray-500">

@@ -16,7 +16,7 @@ const TypeFilter: React.FC<Props> = ({
     <select
       value={selectedType}
       onChange={(e) => setSelectedType(e.target.value)}
-      className="p-2 border rounded"
+      className="type-filter"
     >
       <option value="">All Types</option>
       {types.map((type) => (
