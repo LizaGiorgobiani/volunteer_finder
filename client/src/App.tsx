@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getOpportunities } from "./services/api";
 import type { Opportunity } from "./types/Opportunity";
+import OpportunityCard from "./components/OpportunityCard";
 
 function App() {
   const [data, setData] = useState<Opportunity[]>([]);
@@ -10,15 +11,13 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>Volunteer Opportunities</h1>
-      <ul>
+    <div className="app-container">
+      <h1 className="page-title">Volunteer Opportunities</h1>
+      <div className="card-list">
         {data.map((opp) => (
-          <li key={opp.id}>
-            {opp.title} - {opp.location}
-          </li>
+          <OpportunityCard key={opp.id} opportunity={opp} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

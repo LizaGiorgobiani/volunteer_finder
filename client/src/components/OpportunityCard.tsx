@@ -1,5 +1,6 @@
 import React from "react";
 import type { Opportunity } from "../types/Opportunity";
+import "./OpportunityCard.css";
 
 type Props = {
   opportunity: Opportunity;
