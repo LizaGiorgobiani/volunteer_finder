@@ -1,0 +1,30 @@
+import React from "react";
+
+type Props = {
+  selectedType: string;
+  setSelectedType: (type: string) => void;
+  types: string[];
+};
+
+const TypeFilter: React.FC<Props> = ({
+  selectedType,
+  setSelectedType,
+  types,
+}) => {
+  return (
+    <select
+      value={selectedType}
+      onChange={(e) => setSelectedType(e.target.value)}
+      className="p-2 border rounded"
+    >
+      <option value="">All Types</option>
+      {types.map((type) => (
+        <option key={type} value={type}>
+          {type}
+        </option>
+      ))}
+    </select>
+  );
+};
+
+export default TypeFilter;
