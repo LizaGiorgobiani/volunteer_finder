@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { getOpportunities } from "./services/api";
+import { useState } from "react";
+import { useOpportunities } from "./hooks/useOpportunities";
 import type { Opportunity } from "./types/Opportunity";
 
 import Header from "./components/Header";
@@ -12,35 +12,20 @@ import "./components/TypeFilter.css";
 import "./components/OpportunityCard.css";
 
 function App() {
-  const [data, setData] = useState<Opportunity[]>([]);
-  const [filteredData, setFilteredData] = useState<Opportunity[]>([]);
+  const { data, loading, error } = useOpportunities();
+
   const [keyword, setKeyword] = useState<string>("");
   const [selectedType, setSelectedType] = useState<string>("");
 
-  useEffect(() => {
-    getOpportunities()
-      .then((res) => {
-        setData(res);
-        setFilteredData(res);
-      })
-      .catch(console.error);
-  }, []);
-
-  useEffect(() => {
+  const filteredData = data.filter((opp) => {
     const lower = keyword.toLowerCase();
+    const matchesKeyword =
+      opp.title.toLowerCase().includes(lower) ||
+      opp.location.toLowerCase().includes(lower);
+    const matchesType = selectedType === "" || opp.type === selectedType;
 
-    const filtered = data.filter((opp) => {
-      const matchesKeyword =
-        opp.title.toLowerCase().includes(lower) ||
-        opp.location.toLowerCase().includes(lower);
-
-      const matchesType = selectedType === "" || opp.type === selectedType;
-
-      return matchesKeyword && matchesType;
-    });
-
-    setFilteredData(filtered);
-  }, [keyword, selectedType, data]);
+    return matchesKeyword && matchesType;
+  });
 
   const allTypes = Array.from(new Set(data.map((opp) => opp.type)));
 
@@ -54,15 +39,20 @@ function App() {
         types={allTypes}
       />
 
-      <div className="card-list">
-        {filteredData.length > 0 ? (
-          filteredData.map((opp) => (
-            <OpportunityCard key={opp.id} opportunity={opp} />
-          ))
-        ) : (
-          <p>No matching opportunities found.</p>
-        )}
-      </div>
+      {loading && <p className="status-text">Loading opportunities...</p>}
+      {error && <p className="status-text error-text">{error}</p>}
+
+      {!loading && !error && (
+        <div className="card-list">
+          {filteredData.length > 0 ? (
+            filteredData.map((opp) => (
+              <OpportunityCard key={opp.id} opportunity={opp} />
+            ))
+          ) : (
+            <p>No matching opportunities found.</p>
+          )}
+        </div>
+      )}
     </div>
   );
 }
