@@ -36,25 +36,32 @@
   - [x] Add base routes and page layout (e.g., Header, Footer)
   - [x] _Commit: "chore: Setup React app with TypeScript and base structure"_
 
-- [ ] **Step 2.2: Define Opportunity Types & API Service**
+- [x] **Step 2.2: Define Opportunity Types & API Service**
 
-  - [ ] Create shared `Opportunity` type (sync with backend)
-  - [ ] Create `api.ts` using Axios for calling backend
-  - [ ] Add loading/error state handling
-  - [ ] _Commit: "feat: Create API service for fetching opportunities"_
+  - [x] Create shared `Opportunity` type (sync with backend)
+  - [x] Create `api.ts` using Axios for calling backend
+  - [x] Add loading/error state handling
+  - [x] _Commit: "feat: Create API service for fetching opportunities"_
 
-- [ ] **Step 2.3: Build UI Components**
+- [x] **Step 2.3: Build UI Components**
 
-  - [ ] Create `OpportunityCard` to display an opportunity
-  - [ ] Create `SearchBar` and `TypeFilter` components
-  - [ ] Style components using basic CSS or Tailwind/MUI
-  - [ ] _Commit: "feat: Build and style UI components for opportunity listing"_
+  - [x] Create `OpportunityCard` to display an opportunity
+  - [x] Create `SearchBar` and `TypeFilter` components
+  - [x] Style components using basic CSS or Tailwind/MUI
+  - [x] _Commit: "feat: Build and style UI components for opportunity listing"_
 
-- [ ] **Step 2.4: Connect UI to API**
-  - [ ] Fetch opportunities and render list
-  - [ ] Wire up `SearchBar` and `TypeFilter` to apply query params
-  - [ ] Display loading, error, and "no results" messages
-  - [ ] _Commit: "feat: Integrate opportunity list with API and filters"_
+- [x] **Step 2.4: Connect UI to API**
+  - [x] Fetch opportunities and render list
+  - [x] Wire up `SearchBar` and `TypeFilter` to apply query params
+  - [x] Display loading, error, and "no results" messages
+  - [x] _Commit: "feat: Integrate opportunity list with API and filters"_
+- [ ] **Step 2.5: Add Routing & Detail Pages**
+
+  - [ ] Setup `react-router-dom`
+  - [ ] Create pages: `HomePage.tsx`, `OpportunitiesPage.tsx`, `OpportunityDetailPage.tsx`, `AboutPage.tsx`
+  - [ ] Link each opportunity card to `/opportunities/:id`
+  - [ ] Show full opportunity info on detail page
+  - [ ] _Commit: "feat: Add routing and individual opportunity page"_
 
 ## Phase 3: Documentation, Testing, and Finalization
 
