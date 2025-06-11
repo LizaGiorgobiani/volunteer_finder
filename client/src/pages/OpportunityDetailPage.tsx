@@ -5,7 +5,7 @@ const OpportunityDetailPage = () => {
   const { id } = useParams();
   const { data } = useOpportunities();
 
-  const opportunity = data.find((opp) => opp.id === id);
+  const opportunity = data.find((opp) => String(opp.id) === id);
 
   if (!opportunity) return <p>Opportunity not found.</p>;
 

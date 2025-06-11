@@ -1,24 +1,21 @@
-import React from "react";
 import OpportunityCard from "../components/OpportunityCard";
 import type { Opportunity } from "../types/Opportunity";
 
 type Props = {
   data: Opportunity[];
   loading: boolean;
-  error: string | null;
+  error: any;
 };
 
 const OpportunitiesPage: React.FC<Props> = ({ data, loading, error }) => {
-  return (
-    <div className="card-list">
-      {loading && <p>Loading opportunities...</p>}
-      {error && <p className="error-text">{error}</p>}
+  if (loading) return <p>Loading opportunities...</p>;
+  if (error) return <p>Error loading opportunities.</p>;
 
-      {data.length > 0 ? (
-        data.map((opp) => <OpportunityCard key={opp.id} opportunity={opp} />)
-      ) : (
-        <p>No matching opportunities found.</p>
-      )}
+  return (
+    <div className="grid gap-4 p-4 md:grid-cols-2 lg:grid-cols-3">
+      {data.map((opp) => (
+        <OpportunityCard key={opp.id} opportunity={opp} />
+      ))}
     </div>
   );
 };
