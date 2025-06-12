@@ -1,0 +1,53 @@
+.opportunity-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.opportunity-info {
+  margin-bottom: 2rem;
+}
+
+.register-box {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.register-box h3 {
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.register-box input {
+  padding: 0.6rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #9ca3af;
+  font-size: 1rem;
+}
+
+.register-box button {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.register-box button:hover {
+  background-color: #1e40af;
+}
+
+.success-msg {
+  color: #10b981;
+  font-weight: bold;
+  margin-top: 1rem;
+}
