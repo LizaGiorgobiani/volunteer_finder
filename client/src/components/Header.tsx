@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import "./Header.css";
+import "../styles/Header.css"; // Adjust the path as necessary
 import SearchBar from "./SearchBar";
 import TypeFilter from "./TypeFilter";
 
