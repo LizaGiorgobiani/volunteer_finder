@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./HomePage.css";
+import "../styles/HomePage.css"; // Adjust the path as necessary
 
 const HomePage: React.FC = () => {
   const [email, setEmail] = useState("");
