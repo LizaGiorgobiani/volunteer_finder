@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useOpportunities } from "../hooks/useOpportunities";
-import "./OpportunityDetail.css";
+import "../styles/OpportunityDetail.css"; // Assuming you have a CSS file for styling
 
 const OpportunityDetailPage = () => {
   const { id } = useParams();

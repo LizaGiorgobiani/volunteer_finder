@@ -22,5 +22,141 @@
     "location": "City Library",
     "date": "2024-07-10",
     "type": "education"
+  },
+  {
+    "id": "4",
+    "title": "Park Tree Planting",
+    "description": "Plant trees to help reforest local parks.",
+    "location": "Maplewood Park",
+    "date": "2024-07-15",
+    "type": "environment"
+  },
+  {
+    "id": "5",
+    "title": "Blood Donation Drive",
+    "description": "Assist in organizing and guiding blood donors.",
+    "location": "Red Cross Center",
+    "date": "2024-07-20",
+    "type": "health"
+  },
+  {
+    "id": "6",
+    "title": "Animal Shelter Volunteer",
+    "description": "Care for rescued animals and help with adoptions.",
+    "location": "Happy Paws Shelter",
+    "date": "2024-07-22",
+    "type": "animals"
+  },
+  {
+    "id": "7",
+    "title": "Neighborhood Cleanup",
+    "description": "Collect litter and beautify public spaces.",
+    "location": "Elm Street District",
+    "date": "2024-07-25",
+    "type": "community"
+  },
+  {
+    "id": "8",
+    "title": "Library Book Organizer",
+    "description": "Help sort and shelve books at the public library.",
+    "location": "Central Library",
+    "date": "2024-07-28",
+    "type": "education"
+  },
+  {
+    "id": "9",
+    "title": "Hospital Support Crew",
+    "description": "Guide visitors and support non-medical tasks.",
+    "location": "Sunrise Hospital",
+    "date": "2024-08-01",
+    "type": "health"
+  },
+  {
+    "id": "10",
+    "title": "Community Arts Workshop",
+    "description": "Help children express creativity through art.",
+    "location": "Community Arts Center",
+    "date": "2024-08-03",
+    "type": "arts"
+  },
+  {
+    "id": "11",
+    "title": "Seniors Tech Help Day",
+    "description": "Teach senior citizens how to use smartphones and computers.",
+    "location": "Silver Age Home",
+    "date": "2024-08-06",
+    "type": "education"
+  },
+  {
+    "id": "12",
+    "title": "Charity Fundraiser Setup",
+    "description": "Assist with setting up tables, booths, and decor.",
+    "location": "Town Hall",
+    "date": "2024-08-08",
+    "type": "community"
+  },
+  {
+    "id": "13",
+    "title": "Wildlife Habitat Restoration",
+    "description": "Rebuild birdhouses and maintain forest trails.",
+    "location": "Greenfield Reserve",
+    "date": "2024-08-10",
+    "type": "environment"
+  },
+  {
+    "id": "14",
+    "title": "Music for Healing",
+    "description": "Play calming music in hospital lobbies.",
+    "location": "Wellness Hospital",
+    "date": "2024-08-13",
+    "type": "arts"
+  },
+  {
+    "id": "15",
+    "title": "Cooking for the Homeless",
+    "description": "Help prepare meals for the evening kitchen.",
+    "location": "Hope Soup Kitchen",
+    "date": "2024-08-15",
+    "type": "community"
+  },
+  {
+    "id": "16",
+    "title": "First Aid Education",
+    "description": "Teach children basic first aid skills.",
+    "location": "Youth Center",
+    "date": "2024-08-17",
+    "type": "health"
+  },
+  {
+    "id": "17",
+    "title": "Recycling Awareness Campaign",
+    "description": "Educate residents about sorting and recycling.",
+    "location": "City Square",
+    "date": "2024-08-20",
+    "type": "environment"
+  },
+  {
+    "id": "18",
+    "title": "Clothing Drive Organizer",
+    "description": "Sort and distribute donated clothing to families.",
+    "location": "Compassion Hall",
+    "date": "2024-08-22",
+    "type": "community"
+  },
+  {
+    "id": "19",
+    "title": "STEM Workshop Assistant",
+    "description": "Guide kids through fun science and coding projects.",
+    "location": "TechHub Academy",
+    "date": "2024-08-25",
+    "type": "education"
+  },
+  {
+    "id": "20",
+    "title": "Dog Walking Day",
+    "description": "Walk and socialize dogs from the shelter.",
+    "location": "Happy Paws Shelter",
+    "date": "2024-08-28",
+    "type": "animals"
   }
 ]

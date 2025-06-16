@@ -1,5 +1,5 @@
 import React from "react";
-import "./SearchBar.css";
+import "../styles/SearchBar.css"; // Adjust the path as necessary
 
 type Props = {
   keyword: string;
