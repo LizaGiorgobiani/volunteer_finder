@@ -1,29 +1,103 @@
-This is a full-stack web application that lists volunteer opportunities. Users can browse available opportunities and filter them based on keywords or activity type.
+# Volunteer Finder
 
-Technologies Used
-Frontend: React with TypeScript
+**Volunteer Finder** is a full-stack web application that displays a list of volunteer opportunities. Users can browse available events and filter them by keyword or activity type.
 
-Backend: Node.js with Express and TypeScript
+---
 
-Data: JSON sample data
+## 🛠 Technologies Used
 
-Styling: Basic CSS or UI library
+### Frontend
 
-Features
-Display a list of volunteer opportunities
+- React
+- TypeScript
+- React Router
 
-Filter opportunities by keyword or category
+### Backend
 
-Type-safe data models using TypeScript
+- Node.js
+- Express
+- TypeScript
 
-Simple and modular folder structure
+### Data
 
-Project Structure
-The project is divided into two parts:
+- Static `opportunities.json` file (mock data)
 
-client/ contains the frontend React application
+### Styling
 
-server/ contains the backend Express server and sample data
+- Basic CSS (custom and per-component styles)
 
-Purpose
-This project was built for practice and learning, with a focus on building a clean, functional full-stack application using modern web technologies.
+---
+
+## ✨ Features
+
+- Browse all volunteer opportunities
+- Filter by **keyword** (title/location)
+- Filter by **type** (e.g., environment, education)
+- View full details of each opportunity
+- Simulate registration with email input
+- Fully typed using TypeScript across client and server
+- Modular and organized codebase
+
+---
+
+## 📁 Project Structure
+
+```
+VOLUNTEER_FINDER/
+├── client/       # React frontend
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── hooks/
+│       ├── styles/
+│       └── types/
+├── server/       # Node/Express backend
+│   └── src/
+│       ├── data/
+│       ├── models/
+│       ├── test/
+│       └── server.ts
+├── README.md     # Project overview (this file)
+├── TODO.md       # Task tracking
+└── spec.md       # Full technical specifications
+```
+
+---
+
+## 🎯 Purpose
+
+This project was created for learning and practice. It demonstrates:
+
+- Building a complete full-stack application using **modern web technologies**
+- Clean folder structure and modular design
+- End-to-end flow: API creation, data handling, UI rendering, and user interaction
+
+---
+
+## 🚀 Getting Started
+
+### 1. Start the backend
+
+```bash
+cd server
+npm install
+npm run dev
+```
+
+Runs on `http://localhost:3001`
+
+### 2. Start the frontend
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+Runs on `http://localhost:5173`
+
+---
+
+## 📄 License
+
+MIT License
