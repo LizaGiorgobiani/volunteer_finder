@@ -1,43 +1,78 @@
 # Volunteer Finder Documentation
 
-## 1. Project Overview
+## Overview
 
-**Volunteer Finder** is a full-stack web application that helps users discover and register for local volunteer opportunities. It is intended to demonstrate key web development concepts including client-server architecture, TypeScript modeling, and React state management.
-
----
-
-## 2. Project Objectives
-
-- Build a fully typed full-stack application using React (frontend) and Node.js with Express (backend)
-- Store sample volunteer data in a JSON file served via an API
-- Implement client-side filtering by keyword and category (type)
-- Create user-friendly components for navigation, searching, and displaying results
-- Apply React Router for multi-page support
+Volunteer Finder is a browser-based volunteer opportunity platform that enables users to search and browse community events using a user-friendly React interface. It fetches mock data from a backend API built with Node.js and Express. This documentation explains how to run, understand, and extend the application.
 
 ---
 
-## 3. Tech Stack
+## Getting Started
 
-| Layer     | Technology             |
-|-----------|------------------------|
-| Frontend  | React, Vite, TypeScript|
-| Backend   | Node.js, Express, TypeScript |
-| Styling   | CSS                    |
-| Testing   | Vitest, Supertest      |
+### Prerequisites
+
+- Node.js (v18 or later)
+- npm (v9 or later)
+
+### Backend Setup
+
+```bash
+cd server
+npm install
+npm run dev
+```
+
+Runs on: [http://localhost:3001](http://localhost:3001)
+
+### Frontend Setup
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+Runs on: [http://localhost:5173](http://localhost:5173)
 
 ---
 
-## 4. Backend Specification
+## Features
 
-### API Endpoint
+- List view of volunteer opportunities
+- Filtering by keyword (title or location)
+- Filtering by type (education, environment, etc.)
+- Dedicated detail view for each opportunity
+- Email-based registration form (local simulation)
+- Fully typed components using TypeScript
+- React Router navigation across multiple pages
+
+---
+
+## Folder Structure
 
 ```
-GET /api/opportunities
+VOLUNTEER_FINDER/
+├── client/
+│   └── src/
+│       ├── components/      # Reusable UI elements (cards, header, filters)
+│       ├── hooks/           # Custom hook: useOpportunities
+│       ├── pages/           # Home, About, Opportunities, Detail
+│       ├── services/        # API call logic
+│       ├── styles/          # CSS files
+│       └── types/           # Shared interfaces
+├── server/
+│   └── src/
+│       ├── data/            # opportunities.json (mock data)
+│       ├── models/          # Opportunity interface
+│       ├── test/            # API tests with Supertest
+│       └── server.ts        # Main Express app
 ```
-- Returns a list of opportunities stored in `opportunities.json`
-- No authentication required
 
-### Data Model (Opportunity)
+---
+
+## Data Model
+
+### Type Definition
+
 ```ts
 export interface Opportunity {
   id: string;
@@ -49,7 +84,8 @@ export interface Opportunity {
 }
 ```
 
-### Sample Data
+### Sample Entry
+
 ```json
 {
   "id": "1",
@@ -63,51 +99,63 @@ export interface Opportunity {
 
 ---
 
-## 5. Frontend Specification
+## Key Components
 
-### Data Fetching
-- `useOpportunities.ts` uses `fetch` to retrieve opportunities from the Express API
-- Results are stored in local state and used throughout the app
+### `Header.tsx`
 
-### Components
+- Contains site navigation and filter section
+- Filters only shown on `/opportunities`
 
-#### `Header.tsx`
-- Displays site title and nav links
-- Conditionally renders `SearchBar` and `TypeFilter` on `/opportunities`
+### `SearchBar.tsx`
 
-#### `SearchBar.tsx`
-- Text input for keyword filtering (title or location)
+- Input field that updates the `keyword` state in `App.tsx`
 
-#### `TypeFilter.tsx`
-- Dropdown to select opportunity type
+### `TypeFilter.tsx`
 
-#### `OpportunityCard.tsx`
-- Displays opportunity title, description, date, location, and type
-- Clickable; navigates to detail page
+- Dropdown populated dynamically with opportunity types
 
-#### `OpportunityDetailPage.tsx`
-- Displays full opportunity info
-- Includes a form to "register" with an email (local state only)
+### `OpportunityCard.tsx`
 
-### Pages
+- Reusable UI card with brief opportunity info
 
-#### `HomePage.tsx`
-- Welcome message, CTA button, stats, testimonials, newsletter form
+### `OpportunityDetailPage.tsx`
 
-#### `OpportunitiesPage.tsx`
-- Maps filtered opportunities to cards
+- Displays full opportunity details
+- Includes a mock email registration form
 
-#### `AboutPage.tsx`
-- Explains project purpose, mission, and values
+---
 
-### Routing
-- Configured in `App.tsx` using `react-router-dom`
+## Pages
 
-### Filtering Logic
+### `/` – HomePage
+
+- Welcome message
+- CTA to explore
+- Event preview and testimonials
+
+### `/about` – AboutPage
+
+- App mission, purpose, and community values
+
+### `/opportunities` – OpportunitiesPage
+
+- Lists all filtered opportunities using `OpportunityCard`
+
+### `/opportunities/:id` – DetailPage
+
+- Shows full info and registration form for selected opportunity
+
+---
+
+## Filtering Logic
+
+Filtering is done client-side using React state:
+
 ```ts
 const filteredData = data.filter((opp) => {
-  const matchesKeyword = opp.title.toLowerCase().includes(keyword.toLowerCase()) ||
-                         opp.location.toLowerCase().includes(keyword.toLowerCase());
+  const matchesKeyword =
+    opp.title.toLowerCase().includes(keyword.toLowerCase()) ||
+    opp.location.toLowerCase().includes(keyword.toLowerCase());
   const matchesType = selectedType === "" || opp.type === selectedType;
   return matchesKeyword && matchesType;
 });
@@ -115,66 +163,37 @@ const filteredData = data.filter((opp) => {
 
 ---
 
-## 6. File & Folder Structure (Simplified)
-
-```
-VOLUNTEER_FINDER/
-├── client/
-│   └── src/
-│       ├── components/
-│       ├── hooks/
-│       ├── pages/
-│       ├── services/
-│       ├── styles/
-│       └── types/
-├── server/
-│   └── src/
-│       ├── data/
-│       ├── models/
-│       ├── test/
-│       └── server.ts
-```
-
----
-
-## 7. Testing
+## Testing Summary
 
 ### Backend
-- Uses `Supertest` to test `/api/opportunities` route
+
+- Tested with Supertest
+- Tests `/api/opportunities` for correct response format
 
 ### Frontend
-- Uses `Vitest` for unit tests on components and API service
+
+- Unit tested using Vitest
+- Validates rendering, props, and filtering behavior
 
 ---
 
-## 8. How to Run Locally
+## Deployment Notes
 
-### Start Backend
-```bash
-cd server
-npm install
-npm run dev
-```
-Runs on: `http://localhost:3001`
-
-### Start Frontend
-```bash
-cd client
-npm install
-npm run dev
-```
-Runs on: `http://localhost:5173`
+- Backend is designed for local development only
+- Frontend is deployable to Vercel/Netlify
+- Consider replacing JSON with a database for scalability
 
 ---
 
-## 9. Limitations & Future Improvements
-- Currently uses static JSON data instead of real database
-- Registration is local only, no actual email handling
-- No admin or user management
-- Could be extended with filters like date, location radius, or tags
+## Known Limitations
+
+- Static mock data (no real database)
+- No persistent user registration or authentication
+- Filtering limited to two fields (keyword and type)
+- No pagination or sorting
 
 ---
 
-## 10. License
+## License
 
 MIT License
