@@ -55,21 +55,21 @@
   - [x] Wire up `SearchBar` and `TypeFilter` to apply query params
   - [x] Display loading, error, and "no results" messages
   - [x] _Commit: "feat: Integrate opportunity list with API and filters"_
-- [ ] **Step 2.5: Add Routing & Detail Pages**
+- [x] **Step 2.5: Add Routing & Detail Pages**
 
-  - [ ] Setup `react-router-dom`
-  - [ ] Create pages: `HomePage.tsx`, `OpportunitiesPage.tsx`, `OpportunityDetailPage.tsx`, `AboutPage.tsx`
-  - [ ] Link each opportunity card to `/opportunities/:id`
-  - [ ] Show full opportunity info on detail page
-  - [ ] _Commit: "feat: Add routing and individual opportunity page"_
+  - [x] Setup `react-router-dom`
+  - [x] Create pages: `HomePage.tsx`, `OpportunitiesPage.tsx`, `OpportunityDetailPage.tsx`, `AboutPage.tsx`
+  - [x] Link each opportunity card to `/opportunities/:id`
+  - [x] Show full opportunity info on detail page
+  - [x] _Commit: "feat: Add routing and individual opportunity page"_
 
 ## Phase 3: Documentation, Testing, and Finalization
 
-- [ ] **Step 3.1: Frontend Testing**
+- [x] **Step 3.1: Frontend Testing**
 
-  - [ ] Write tests for `OpportunityCard` and `SearchBar`
-  - [ ] Test filtering behavior and API integration
-  - [ ] _Commit: "test: Add frontend tests for UI and filtering logic"_
+  - [x] Write tests for `OpportunityCard` and `SearchBar`
+  - [x] Test filtering behavior and API integration
+  - [x] _Commit: "test: Add frontend tests for UI and filtering logic"_
 
 - [ ] **Step 3.2: Documentation & Specs**
 
