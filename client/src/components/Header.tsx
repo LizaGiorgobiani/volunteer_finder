@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "../styles/Header.css";
 import SearchBar from "./SearchBar";
 import TypeFilter from "./TypeFilter";
+import { useAuth } from "../context/AuthContext";
 
 type Props = {
   keyword: string;
@@ -22,6 +23,8 @@ const Header: React.FC<Props> = ({
   const location = useLocation();
   const showFilters = location.pathname === "/opportunities";
 
+  const { user, logout } = useAuth(); // ✅ use auth
+
   return (
     <header className="header">
       <div className="header-top">
@@ -30,6 +33,25 @@ const Header: React.FC<Props> = ({
           <Link to="/">Home</Link>
           <Link to="/opportunities">Opportunities</Link>
           <Link to="/about">About</Link>
+
+          {/* 🔐 Conditional Buttons */}
+          {user ? (
+            <>
+              <span className="header-user">👋 {user}</span>
+              <button className="auth-button" onClick={logout}>
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/login">
+                <button className="auth-button">Sign In</button>
+              </Link>
+              <Link to="/signup">
+                <button className="auth-button secondary">Sign Up</button>
+              </Link>
+            </>
+          )}
         </nav>
       </div>
 
