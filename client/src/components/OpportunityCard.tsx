@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import type { Opportunity } from "../types/Opportunity";
-import "../styles/OpportunityCard.css"; // Adjust the path as necessary
+import "../styles/OpportunityCard.css";
 
 type Props = {
   opportunity: Opportunity;

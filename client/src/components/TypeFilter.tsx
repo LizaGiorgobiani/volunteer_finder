@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/TypeFilter.css"; // Adjust the path as necessary
+import "../styles/TypeFilter.css";
 
 type Props = {
   selectedType: string;
