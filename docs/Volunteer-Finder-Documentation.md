@@ -41,7 +41,8 @@ Runs on: [http://localhost:5173](http://localhost:5173)
 - Filtering by keyword (title or location)
 - Filtering by type (education, environment, etc.)
 - Dedicated detail view for each opportunity
-- Email-based registration form (local simulation)
+- Calendar view for browsing by date
+- Login and signup functionality with password authentication
 - Fully typed components using TypeScript
 - React Router navigation across multiple pages
 
@@ -55,7 +56,7 @@ VOLUNTEER_FINDER/
 │   └── src/
 │       ├── components/      # Reusable UI elements (cards, header, filters)
 │       ├── hooks/           # Custom hook: useOpportunities
-│       ├── pages/           # Home, About, Opportunities, Detail
+│       ├── pages/           # Home, About, Opportunities, Detail, Login, Signup, Calendar
 │       ├── services/        # API call logic
 │       ├── styles/          # CSS files
 │       └── types/           # Shared interfaces
@@ -123,6 +124,18 @@ export interface Opportunity {
 - Displays full opportunity details
 - Includes a mock email registration form
 
+### `LoginPage.tsx`
+
+- User sign-in form with password input
+
+### `SignupPage.tsx`
+
+- New user registration form with password input
+
+### `CalendarPage.tsx`
+
+- Calendar component for date-based filtering of opportunities
+
 ---
 
 ## Pages
@@ -144,6 +157,18 @@ export interface Opportunity {
 ### `/opportunities/:id` – DetailPage
 
 - Shows full info and registration form for selected opportunity
+
+### `/calendar` – CalendarPage
+
+- Interactive calendar to display matching opportunities by date
+
+### `/login` – LoginPage
+
+- Secure login form
+
+### `/signup` – SignupPage
+
+- User account creation form
 
 ---
 
@@ -173,7 +198,7 @@ const filteredData = data.filter((opp) => {
 ### Frontend
 
 - Unit tested using Vitest
-- Validates rendering, props, and filtering behavior
+- Validates rendering, props, navigation, calendar selection, and form submissions
 
 ---
 
@@ -188,8 +213,8 @@ const filteredData = data.filter((opp) => {
 ## Known Limitations
 
 - Static mock data (no real database)
-- No persistent user registration or authentication
-- Filtering limited to two fields (keyword and type)
+- Basic authentication (no sessions or tokens)
+- Filtering limited to keyword/type/date only
 - No pagination or sorting
 
 ---
