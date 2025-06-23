@@ -23,7 +23,7 @@ const Header: React.FC<Props> = ({
   const location = useLocation();
   const showFilters = location.pathname === "/opportunities";
 
-  const { user, logout } = useAuth(); // ✅ use auth
+  const { user, logout } = useAuth();
 
   return (
     <header className="header">
@@ -32,9 +32,8 @@ const Header: React.FC<Props> = ({
         <nav className="header-nav">
           <Link to="/">Home</Link>
           <Link to="/opportunities">Opportunities</Link>
+          <Link to="/calendar">Calendar</Link> {/* ✅ Added */}
           <Link to="/about">About</Link>
-
-          {/* 🔐 Conditional Buttons */}
           {user ? (
             <>
               <span className="header-user">👋 {user}</span>
