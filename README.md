@@ -11,6 +11,8 @@
 - React
 - TypeScript
 - React Router
+- React Calendar (for calendar-based opportunity filtering)
+- Password-based login & signup (mocked authentication)
 
 ### Backend
 
@@ -24,7 +26,7 @@
 
 ### Styling
 
-- Basic CSS (custom and per-component styles)
+- Custom CSS and per-component styles
 
 ---
 
@@ -34,7 +36,9 @@
 - Filter by **keyword** (title/location)
 - Filter by **type** (e.g., environment, education)
 - View full details of each opportunity
+- Filter by **date** using a calendar view
 - Simulate registration with email input
+- Login and signup with username and password (mocked)
 - Fully typed using TypeScript across client and server
 - Modular and organized codebase
 
@@ -42,25 +46,25 @@
 
 ## 📁 Project Structure
 
-```
 VOLUNTEER_FINDER/
-├── client/       # React frontend
-│   └── src/
-│       ├── components/
-│       ├── pages/
-│       ├── hooks/
-│       ├── styles/
-│       └── types/
-├── server/       # Node/Express backend
-│   └── src/
-│       ├── data/
-│       ├── models/
-│       ├── test/
-│       └── server.ts
-├── README.md     # Project overview (this file)
-├── TODO.md       # Task tracking
-└── spec.md       # Full technical specifications
-```
+├── client/ # React frontend
+│ └── src/
+│ ├── components/
+│ ├── context/ # Auth context
+│ ├── hooks/
+│ ├── pages/
+│ ├── services/
+│ ├── styles/
+│ └── types/
+├── server/ # Node/Express backend
+│ └── src/
+│ ├── data/
+│ ├── models/
+│ ├── test/
+│ └── server.ts
+├── docs/ # Markdown docs (architecture, spec, schema, etc.)
+├── README.md # Project overview (this file)
+└── spec.md # Full technical specifications
 
 ---
 
@@ -82,22 +86,20 @@ This project was created for learning and practice. It demonstrates:
 cd server
 npm install
 npm run dev
-```
+Runs on: http://localhost:3001
 
-Runs on `http://localhost:3001`
-
-### 2. Start the frontend
-
-```bash
+2. Start the frontend
+bash
+Copy
+Edit
 cd client
 npm install
 npm run dev
-```
+Runs on: http://localhost:5173
 
-Runs on `http://localhost:5173`
-
----
-
-## 📄 License
-
+📄 License
 MIT License
+
+
+
+```
