@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import CalendarPage from "../CalendarPage";
-import { useOpportunities } from "../hooks/useOpportunities";
+import { useOpportunities } from "../../hooks/useOpportunities";
 import { expect, vi } from "vitest";
 
 // Mock opportunity data

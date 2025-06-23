@@ -4,7 +4,7 @@
     "title": "Beach Cleanup",
     "description": "Help clean up the local beach and protect marine life.",
     "location": "Oceanview Park",
-    "date": "2024-07-01",
+    "date": "2025-07-01",
     "type": "environment"
   },
   {
@@ -12,7 +12,7 @@
     "title": "Food Bank Assistance",
     "description": "Organize and distribute food to families in need.",
     "location": "Downtown Shelter",
-    "date": "2024-07-05",
+    "date": "2025-07-05",
     "type": "community"
   },
   {
@@ -20,7 +20,7 @@
     "title": "Tutoring High School Students",
     "description": "Support students with math and science homework.",
     "location": "City Library",
-    "date": "2024-07-10",
+    "date": "2025-07-10",
     "type": "education"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Park Tree Planting",
     "description": "Plant trees to help reforest local parks.",
     "location": "Maplewood Park",
-    "date": "2024-07-15",
+    "date": "2025-07-15",
     "type": "environment"
   },
   {
@@ -36,7 +36,7 @@
     "title": "Blood Donation Drive",
     "description": "Assist in organizing and guiding blood donors.",
     "location": "Red Cross Center",
-    "date": "2024-07-20",
+    "date": "2025-07-20",
     "type": "health"
   },
   {
@@ -44,7 +44,7 @@
     "title": "Animal Shelter Volunteer",
     "description": "Care for rescued animals and help with adoptions.",
     "location": "Happy Paws Shelter",
-    "date": "2024-07-22",
+    "date": "2025-07-22",
     "type": "animals"
   },
   {
@@ -52,7 +52,7 @@
     "title": "Neighborhood Cleanup",
     "description": "Collect litter and beautify public spaces.",
     "location": "Elm Street District",
-    "date": "2024-07-25",
+    "date": "2025-07-25",
     "type": "community"
   },
   {
@@ -60,7 +60,7 @@
     "title": "Library Book Organizer",
     "description": "Help sort and shelve books at the public library.",
     "location": "Central Library",
-    "date": "2024-07-28",
+    "date": "2025-07-28",
     "type": "education"
   },
   {
@@ -68,7 +68,7 @@
     "title": "Hospital Support Crew",
     "description": "Guide visitors and support non-medical tasks.",
     "location": "Sunrise Hospital",
-    "date": "2024-08-01",
+    "date": "2025-08-01",
     "type": "health"
   },
   {
@@ -76,7 +76,7 @@
     "title": "Community Arts Workshop",
     "description": "Help children express creativity through art.",
     "location": "Community Arts Center",
-    "date": "2024-08-03",
+    "date": "2025-08-03",
     "type": "arts"
   },
   {
@@ -84,7 +84,7 @@
     "title": "Seniors Tech Help Day",
     "description": "Teach senior citizens how to use smartphones and computers.",
     "location": "Silver Age Home",
-    "date": "2024-08-06",
+    "date": "2025-08-06",
     "type": "education"
   },
   {
@@ -92,7 +92,7 @@
     "title": "Charity Fundraiser Setup",
     "description": "Assist with setting up tables, booths, and decor.",
     "location": "Town Hall",
-    "date": "2024-08-08",
+    "date": "2025-08-08",
     "type": "community"
   },
   {
@@ -100,7 +100,7 @@
     "title": "Wildlife Habitat Restoration",
     "description": "Rebuild birdhouses and maintain forest trails.",
     "location": "Greenfield Reserve",
-    "date": "2024-08-10",
+    "date": "2025-08-10",
     "type": "environment"
   },
   {
@@ -108,7 +108,7 @@
     "title": "Music for Healing",
     "description": "Play calming music in hospital lobbies.",
     "location": "Wellness Hospital",
-    "date": "2024-08-13",
+    "date": "2025-08-13",
     "type": "arts"
   },
   {
@@ -116,7 +116,7 @@
     "title": "Cooking for the Homeless",
     "description": "Help prepare meals for the evening kitchen.",
     "location": "Hope Soup Kitchen",
-    "date": "2024-08-15",
+    "date": "2025-08-15",
     "type": "community"
   },
   {
@@ -124,7 +124,7 @@
     "title": "First Aid Education",
     "description": "Teach children basic first aid skills.",
     "location": "Youth Center",
-    "date": "2024-08-17",
+    "date": "2025-08-17",
     "type": "health"
   },
   {
@@ -132,7 +132,7 @@
     "title": "Recycling Awareness Campaign",
     "description": "Educate residents about sorting and recycling.",
     "location": "City Square",
-    "date": "2024-08-20",
+    "date": "2025-08-20",
     "type": "environment"
   },
   {
@@ -140,7 +140,7 @@
     "title": "Clothing Drive Organizer",
     "description": "Sort and distribute donated clothing to families.",
     "location": "Compassion Hall",
-    "date": "2024-08-22",
+    "date": "2025-08-22",
     "type": "community"
   },
   {
@@ -148,7 +148,7 @@
     "title": "STEM Workshop Assistant",
     "description": "Guide kids through fun science and coding projects.",
     "location": "TechHub Academy",
-    "date": "2024-08-25",
+    "date": "2025-08-25",
     "type": "education"
   },
   {
@@ -156,7 +156,7 @@
     "title": "Dog Walking Day",
     "description": "Walk and socialize dogs from the shelter.",
     "location": "Happy Paws Shelter",
-    "date": "2024-08-28",
+    "date": "2025-08-28",
     "type": "animals"
   }
 ]

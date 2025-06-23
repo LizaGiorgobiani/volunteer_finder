@@ -18,6 +18,9 @@ Define all expected behaviors, system constraints, and technical requirements fo
 | FR4 | Opportunity Detail  | User can view detailed information about a specific opportunity          |
 | FR5 | Registration        | User can submit their email to register for an opportunity (mocked only) |
 | FR6 | Navigation          | User can navigate between Home, About, Opportunities, and Detail pages   |
+| FR7 | Calendar View       | User can view a calendar of events and select a date                     |
+| FR8 | Login               | User can log in using email and password                                 |
+| FR9 | Signup              | User can register using email and password                               |
 
 ---
 
@@ -30,6 +33,7 @@ Define all expected behaviors, system constraints, and technical requirements fo
 | NFR3 | Scalability     | Backend structured to allow database swap in future                        |
 | NFR4 | Maintainability | Code should be modular, well-documented, and follow standard linting rules |
 | NFR5 | Usability       | Responsive layout, intuitive filters, and accessible form inputs           |
+| NFR6 | Accessibility   | UI elements should be accessible via keyboard and screen readers           |
 
 ---
 
@@ -84,6 +88,9 @@ interface Opportunity {
 | `TypeFilter`        | `selectedType`, `setSelectedType`, `types` | Dropdown to choose opportunity category |
 | `OpportunityCard`   | `opportunity`                              | Displays brief info and links to detail |
 | `OpportunityDetail` | URL param `id` via `useParams()`           | Shows extended info + mock email form   |
+| `CalendarPage`      | -                                          | Full calendar with date-matching logic  |
+| `LoginPage`         | -                                          | Login form with password field          |
+| `SignupPage`        | -                                          | Signup form with email and password     |
 
 ---
 
@@ -101,6 +108,8 @@ interface Opportunity {
   - Filtering behavior
   - Prop handling in `SearchBar` and `TypeFilter`
   - Page routing and navigation
+  - Calendar date selection and match logic
+  - Login/Signup password input validation
 
 ---
 
@@ -108,7 +117,7 @@ interface Opportunity {
 
 - Data is static and not connected to a live database
 - Email registration does not persist or trigger any server logic
-- No authentication or user roles
+- No authentication or user roles (beyond simple login simulation)
 - Filtering is basic (no fuzzy match, date range, etc.)
 - No pagination or sorting
 
@@ -122,6 +131,7 @@ interface Opportunity {
 - Add calendar filter, geolocation, and distance radius
 - Host backend with Render and frontend with Vercel
 - Introduce automated deployment and CI/CD
+- Implement password reset and protected routes
 
 ---
 
@@ -134,6 +144,8 @@ interface Opportunity {
 | AC3 | User can click into detail view and register with email |
 | AC4 | All major components are typed and reusable             |
 | AC5 | Tests validate basic UI and API behaviors               |
+| AC6 | Calendar view correctly displays and filters by date    |
+| AC7 | Login/Signup accepts and verifies input validity        |
 
 ---
 
