@@ -7,6 +7,7 @@ import OpportunitiesPage from "./pages/OpportunitiesPage";
 import OpportunityDetailPage from "./pages/OpportunityDetailPage";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
+import CalendarPage from "./pages/CalendarPage"; // ✅ NEW
 import { useOpportunities } from "./hooks/useOpportunities";
 
 import "./App.css";
@@ -52,6 +53,8 @@ function App() {
         />
         <Route path="/opportunities/:id" element={<OpportunityDetailPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/calendar" element={<CalendarPage />} />{" "}
+        {/* ✅ NEW ROUTE */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
       </Routes>

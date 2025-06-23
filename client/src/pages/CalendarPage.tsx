@@ -4,32 +4,45 @@ import "react-calendar/dist/Calendar.css";
 import { useOpportunities } from "../hooks/useOpportunities";
 import "../styles/CalendarPage.css";
 
+const toLocalDateString = (date: Date) =>
+  date.getFullYear() +
+  "-" +
+  String(date.getMonth() + 1).padStart(2, "0") +
+  "-" +
+  String(date.getDate()).padStart(2, "0");
+
 const CalendarPage = () => {
-  const { data } = useOpportunities();
-  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+  const { data, loading, error } = useOpportunities();
+  const [selectedDate, setSelectedDate] = useState(new Date());
 
-  const formattedSelected = selectedDate.toISOString().split("T")[0];
+  const formattedDate = toLocalDateString(selectedDate);
 
-  const matchedOpportunities = data.filter(
-    (opp) => opp.date === formattedSelected
-  );
+  if (loading) return <p>Loading opportunities...</p>;
+  if (error) return <p>Error loading opportunities.</p>;
+  if (!data) return <p>No data available.</p>;
+
+  const matched = data.filter((opp) => {
+    const oppDate = toLocalDateString(new Date(opp.date));
+    return oppDate === formattedDate;
+  });
 
   return (
     <div className="calendar-page">
       <h2>📅 Volunteer Opportunities Calendar</h2>
+
       <Calendar
-        onChange={(value) => {
-          if (value instanceof Date) setSelectedDate(value);
-        }}
         value={selectedDate}
+        onChange={(value) => setSelectedDate(value as Date)}
+        calendarType="iso8601"
       />
+
       <div className="calendar-results">
-        <h3>Opportunities on {formattedSelected}:</h3>
-        {matchedOpportunities.length === 0 ? (
+        <h3>Opportunities on {formattedDate}:</h3>
+        {matched.length === 0 ? (
           <p>No opportunities on this date.</p>
         ) : (
           <ul>
-            {matchedOpportunities.map((opp) => (
+            {matched.map((opp) => (
               <li key={opp.id}>
                 <strong>{opp.title}</strong> – {opp.location}
               </li>
