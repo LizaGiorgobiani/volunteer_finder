@@ -5,6 +5,7 @@ import "../styles/LoginPage.css";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -12,13 +13,18 @@ const LoginPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const registeredUser = localStorage.getItem("registered-user");
+    const stored = localStorage.getItem("registered-user");
+    if (!stored) {
+      setError("No users registered. Please sign up first.");
+      return;
+    }
 
-    if (registeredUser && username.trim() === registeredUser) {
+    const parsed = JSON.parse(stored);
+    if (parsed.username === username.trim() && parsed.password === password) {
       login(username.trim());
       navigate("/opportunities");
     } else {
-      setError("User not found. Please sign up first.");
+      setError("Incorrect username or password.");
     }
   };
 
@@ -31,6 +37,14 @@ const LoginPage = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           placeholder="Enter your username"
+          required
+          className="login-input"
+        />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Enter your password"
           required
           className="login-input"
         />
