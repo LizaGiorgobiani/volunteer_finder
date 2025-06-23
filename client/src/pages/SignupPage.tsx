@@ -4,6 +4,8 @@ import "../styles/SignupPage.css";
 
 const SignupPage = () => {
   const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirm, setConfirm] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -15,7 +17,19 @@ const SignupPage = () => {
       return;
     }
 
-    localStorage.setItem("registered-user", username);
+    if (password.length < 4) {
+      setError("Password must be at least 4 characters");
+      return;
+    }
+
+    if (password !== confirm) {
+      setError("Passwords do not match");
+      return;
+    }
+
+    // Save to localStorage
+    const userData = { username, password };
+    localStorage.setItem("registered-user", JSON.stringify(userData));
     navigate("/login");
   };
 
@@ -28,6 +42,22 @@ const SignupPage = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           placeholder="Choose a username"
+          required
+        />
+        <input
+          className="signup-input"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Enter password"
+          required
+        />
+        <input
+          className="signup-input"
+          type="password"
+          value={confirm}
+          onChange={(e) => setConfirm(e.target.value)}
+          placeholder="Confirm password"
           required
         />
         <button type="submit" className="signup-button">
