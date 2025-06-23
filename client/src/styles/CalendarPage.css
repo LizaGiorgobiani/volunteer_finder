@@ -1,0 +1,82 @@
+.calendar-page {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f9fafb;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.calendar-page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: #1e3a8a;
+  gap: 0.5rem;
+}
+
+.calendar-page h2::before {
+  content: "";
+  font-size: 1.6rem;
+}
+
+.react-calendar {
+  width: 100%;
+  max-width: 100%;
+  background: white;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  font-family: inherit;
+}
+
+.react-calendar__tile {
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background 0.2s ease-in-out;
+}
+
+.react-calendar__tile--now {
+  background: #e0f2fe;
+  color: #0284c7;
+  font-weight: 600;
+}
+
+.react-calendar__tile--active {
+  background: #c7d2fe;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.react-calendar__tile:enabled:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.calendar-results {
+  margin-top: 2rem;
+}
+
+.calendar-results h3 {
+  font-size: 1.2rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-results ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+.calendar-results li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.calendar-results p {
+  font-style: italic;
+  color: #6b7280;
+}

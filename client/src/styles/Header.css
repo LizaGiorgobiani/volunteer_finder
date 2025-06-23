@@ -42,3 +42,34 @@
   margin-top: 16px;
   flex-wrap: wrap;
 }
+.auth-button {
+  padding: 8px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #2563eb; /* same as Browse Opportunities */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.auth-button:hover {
+  background-color: #1d4ed8;
+}
+
+.auth-button.secondary {
+  background-color: #e5e7eb; /* light gray */
+  color: #1e3a8a;
+}
+
+.auth-button.secondary:hover {
+  background-color: #d1d5db;
+}
+
+.header-user {
+  font-weight: 500;
+  color: #1f2d3d;
+  margin-left: 16px;
+  padding-top: 2px;
+}

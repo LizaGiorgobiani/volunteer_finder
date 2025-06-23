@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useOpportunities } from "../hooks/useOpportunities";
-import "../styles/OpportunityDetail.css"; // Assuming you have a CSS file for styling
+import "../styles/OpportunityDetail.css";
 
 const OpportunityDetailPage = () => {
   const { id } = useParams();
@@ -16,7 +16,6 @@ const OpportunityDetailPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email.trim()) {
-      // Here you could also send the email to a backend if needed
       setSubmitted(true);
       setEmail("");
     }
